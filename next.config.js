@@ -3,7 +3,10 @@ const nextTranslate = require('next-translate')
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['pl', 'en'],
+    defaultLocale: 'pl',
+  },
 }
 
-module.exports = nextTranslate(config) // this causes next 12 middleware issue on vercel
-// module.exports = config // this works
+module.exports = nextTranslate(config)
